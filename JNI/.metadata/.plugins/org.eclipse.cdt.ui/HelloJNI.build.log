@@ -1,0 +1,9 @@
+
+**** Clean-only build of configuration Default for project HelloJNI ****
+
+D:\Program_Files\android-ndk-r9b\ndk-build.cmd clean 
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 14 in ./AndroidManifest.xml    
+[armeabi] Clean          : HelloJNI [armeabi]
+[armeabi] Clean          : stdc++ [armeabi]
+
+**** Build Finished ****

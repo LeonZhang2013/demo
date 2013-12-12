@@ -1,0 +1,12 @@
+
+**** Build of configuration Default for project HelloNDK ****
+
+D:\Program_Files\android-ndk-r9b\ndk-build.cmd all 
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 14 in ./AndroidManifest.xml    
+[armeabi] Compile thumb  : MyFirstNdkDemo <= HelloJNI.c
+jni/HelloJNI.c: In function 'Java_com_example_hellondk_HelloJNI_sayHello':
+jni/HelloJNI.c:18:3: error: parameter name omitted
+jni/HelloJNI.c:18:3: error: parameter name omitted
+make.exe: *** [obj/local/armeabi/objs/MyFirstNdkDemo/HelloJNI.o] Error 1
+
+**** Build Finished ****

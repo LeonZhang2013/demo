@@ -1,0 +1,11 @@
+package com.example.sayhellojni;
+
+public class HelloJNI {
+
+	static{
+		System.loadLibrary("HelloJNI");
+	}
+	
+	 public static native String sayHello();
+	
+}
