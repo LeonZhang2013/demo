@@ -1,9 +1,0 @@
-package com.example.hellojni;
-
-public class HelloJNI {
-
-	public native String sayHello();
-	
-	public native int add(int a,int b);
-	
-}
