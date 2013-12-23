@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>使用JavaScript的数学计算，看看你退休时每月工资是多少？ </title>		
+	</head>
+	<body>
+		<script type="text/javascript">
+			//iPay -- 初始工资
+			//iInCompany -- 进入公司年龄
+			//iOutCompany -- 退休年龄
+			//iUpPercent -- 涨工资的比例
+			//iSumPay -- 总工资
+			var iPay = 2000;
+			var iInCompany = 20;
+			var iOutCompany = 60;
+			var iCount = iOutCompany-iInCompany;
+			var iUpPercent = 0.2;
+			var iSumPay = 0;
+			var j=0;
+			document.write("你"+iInCompany+"岁参加工作，第一个月工资是"+iPay+"，每年你的工资涨"+iUpPercent*100+"%！<br />");
+		
+			iSumPay+=(iPay*12);
+			while(iCount>0)
+			{
+				j++;
+				document.write("第"+j+"年每月你赚：" + Math.round(iPay) + "人民币<br />");
+				if(iCount==1)
+				{
+					break;
+				}
+				iPay*=(1+iUpPercent);
+				iSumPay+=(iPay*12);
+				iCount--;
+			}
+		
+			document.write("看好了！你快退休时每月赚多少钱：" + Math.round(iPay) + "人民币，你在这个神奇的公司总共赚了："+ Math.round(iSumPay) +"人民币");
+		</script>
+
+	</body>
+</html>

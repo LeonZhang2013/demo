@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<meta name="viewport" content="width=device-width, user-scalable=yes" />
+		<link rel="stylesheet" media="screen and (-webkit-device-pixel-ratio: 1.5)" href="hdpi.css" />
+		<link rel="stylesheet" media="screen and (-webkit-device-pixel-ratio: 1.0)" href="mdpi.css" />
+		
+		<title>使用JavaScript验证输入表单的正确性 </title>		
+		<script type="text/javascript">
+			function CheckForm(objForm)
+			{
+				var rNums=/[0-9]{1}/;
+				if (!rNums.test(objForm.num.value)) 
+				{
+						Android.showToast('请输入一个数字!');
+						objForm.num.focus();
+						return false;
+				}
+				if (objForm.siteurl.value !='w') 
+				{
+						Android.showToast('请输入网页地址!');
+						objForm.siteurl.focus();
+						return false;
+				}
+			    return true;
+			}
+			
+			funcation tiaozhuan(){
+				Android.tiaozhuan();
+			}
+			console.log("------------字符串")
+		</Script>
+	</head>
+	<body>
+		<form name="form1" method="post" action="www.baidu.com">
+			请输入一个数字:<input name="num" type="text" value="" /><br />
+			请输入梦之都的网址:<input name="siteurl" type="text" value="" />
+			<input type="submit" name="submit" onClick="javaScript:return CheckForm(form1)" />
+		</form>
+		<form  name="form1" method="post" >
+			<input type="button" name="tiaozhuan" onClick="tiaozhuan()" />
+		</form>
+	</body>
+</html>
